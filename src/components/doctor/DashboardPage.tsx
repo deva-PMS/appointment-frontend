@@ -1,5 +1,5 @@
 "use client"
-import { ArrowUpOutlined, CalendarOutlined, CheckCircleOutlined, CloseCircleOutlined, UserAddOutlined, UserOutlined } from "@ant-design/icons";
+import { ArrowUpOutlined, CalendarOutlined, CheckCircleOutlined, CloseCircleOutlined, UserAddOutlined, UserOutlined, UserSwitchOutlined } from "@ant-design/icons";
 import { Avatar, Card, Col, Flex, Row } from "antd";
 
 
@@ -19,7 +19,7 @@ const DashboardPage = () => {
                         </div>
 
                         <div className="">
-                            <Avatar shape="square" size={64} icon={<UserOutlined />} className="bg-green-300" />
+                            <Avatar shape="square" size={64} icon={<UserSwitchOutlined /> } className="bg-green-300" />
 
 
                         </div>

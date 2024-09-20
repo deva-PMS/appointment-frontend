@@ -7,11 +7,11 @@ function Signin() {
     const route = useRouter();
     return (
         <>
-            <div className=' flex items-center justify-center'>
-                <div className='mt-10'>
-                    <button><ArrowLeftOutlined />
+            <div className=''>
+                <Card className='flex '>
+                    <button onClick={() => route.push("/signup")} ><ArrowLeftOutlined />
                         Back to Signup</button>
-                    <h1 className='text-2xl font-bold mt-5'>Signin</h1>
+                    <h1 className='text-2xl font-bold mt-5 '>Signin</h1>
                     <Row>
                         <Col >
                             <Card className=' bg-gray-200 mt-5 mb-5 w-96 ' >
@@ -20,7 +20,7 @@ function Signin() {
                                         <img src="https://doccure.dreamstechnologies.com/html/template/assets/img/icons/doctor-icon.svg" alt="" />
                                         <div>
                                             <h1>Doctor</h1>
-                                            <p>Welcome to Doctor Signup</p>
+                                            <p>Welcome to Doctor Signin</p>
                                         </div>
                                     </div>
                                     <div>
@@ -38,7 +38,7 @@ function Signin() {
                                         <img src="https://doccure.dreamstechnologies.com/html/template/assets/img/icons/patient-icon.svg" alt="" />
                                         <div>
                                             <h1>Patient</h1>
-                                            <p>Welcome to Patient Signup</p>
+                                            <p>Welcome to Patient Signin</p>
                                         </div>
                                     </div>
                                     <div>
@@ -48,7 +48,7 @@ function Signin() {
                             </Card>
                         </Col>
                     </Row>
-                </div>
+                </Card>
             </div>
         </>
     )

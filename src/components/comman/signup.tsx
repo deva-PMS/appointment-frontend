@@ -9,8 +9,8 @@ function Signup() {
         <>
             <div className=' flex items-center justify-center'>
                 <div className='mt-10'>
-                    <button><ArrowLeftOutlined />
-                        Back to Signup</button>
+                    <button onClick={() => route.push("/signin")} ><ArrowLeftOutlined />
+                        Back to Signin</button>
                     <h1 className='text-2xl font-bold mt-5'>Signup</h1>
                     <Row>
                         <Col >
