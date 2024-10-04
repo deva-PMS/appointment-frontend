@@ -45,52 +45,49 @@ const LayoutPage = ({
   return (
 
 
-<>
+    <>
+ 
+      <Row className="mt-10  gap-5" justify="center">
+        <Col xs={24} md={6}>
+          <div className="sticky ">
+            <Card className="relative z-10 h-64" styles={{ body: { padding: 5 } }}>
+              <div className="h-32 bg-[var(--theme-color)] bg-green-500">
 
-
-
-    
-    <Row className="mt-10  gap-5" justify="center">
-      <Col xs={24} md={6}>
-        <div className="sticky ">
-          <Card className="relative z-10 h-64" styles={{ body: { padding:5 } }}>
-            <div className="h-32 bg-[var(--theme-color)] bg-green-500">
-
-            </div>
-
-            <div className="  font-bold absolute top-[25%] left-[34%] ">
-              <Avatar
-                size={110}
-                className=""
-                src="/doctor.jpg"
-              />
-              <div className="   font-bold text-center ">
-                <h1 className="text-2xl mt-4">DEVA</h1>
-                <p>Doctor</p>
               </div>
-            </div>
-            
 
-          </Card>
+              <div className="  font-bold absolute top-[25%] left-[34%] ">
+                <Avatar
+                  size={110}
+                  className=""
+                  src="/doctor.jpg"
+                />
+                <div className="   font-bold text-center ">
+                  <h1 className="text-2xl mt-4">DEVA</h1>
+                  <p>Doctor</p>
+                </div>
+              </div>
 
-          <Card className="font-semibold !mt-5" classNames={{ body: "!px-0" }}>
-            <h1 className="text-2xl text-black px-5 my-5">Dashboard</h1>
-            <Menu
-              onClick={onClick}
-              // style={{ width: 256 }}
-              defaultSelectedKeys={["/docter/dashboard"]}
-              defaultOpenKeys={["sub1"]}
-              mode="inline"
-              items={items}
-            />
-          </Card>
-        </div>
-      </Col>
 
-      <Col xs={24} md={16}>
-        <Card>{children}</Card>
-      </Col>
-    </Row>
+            </Card>
+
+            <Card className="font-semibold !mt-5" classNames={{ body: "!px-0" }}>
+              <h1 className="text-2xl text-black px-5 my-5">Dashboard</h1>
+              <Menu
+                onClick={onClick}
+                // style={{ width: 256 }}
+                defaultSelectedKeys={["/docter/dashboard"]}
+                defaultOpenKeys={["sub1"]}
+                mode="inline"
+                items={items}
+              />
+            </Card>
+          </div>
+        </Col>
+
+        <Col xs={24} md={16}>
+          <Card>{children}</Card>
+        </Col>
+      </Row>
     </>
   );
 };

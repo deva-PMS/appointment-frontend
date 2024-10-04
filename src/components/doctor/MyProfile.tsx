@@ -1,51 +1,84 @@
-import { Card, Col, Row } from 'antd'
-import React from 'react'
+
+"use client"
+
+import React from 'react';
+import { Row, Col, Card, Image, Typography, Tag } from 'antd';
+
+const { Title, Text } = Typography;
 
 const MyProfile = () => {
-    return (
-        <>
-            
-                <Row className='flex justify-around bg-blue-700 p-10'>
+  return (
+    <Row
+      gutter={[16, 16]}
+      justify="center"
+      style={{ backgroundColor: '#e11bc94d', padding: '20px' }}
+    >
+      {/* Profile Image Section */}
+      <Col xs={24} md={12} lg={8}>
+        <Card
 
-                    <div className='bg-blue-300 rounded-lg shadow-inner p'>
-                        <div className='h-96 w-96 shadow-2xl'>
-                            <img src="/name.jpg" alt="" className='sm:h-full md:h-full sm:w-full md:w-full rounded-t-lg ' />
-                        </div>
-                        <h1 className="text-3xl font-bold pt-5  px-5">Dr.RV Singh</h1>
-                        <p className="font-medium px-5 pb-5">Paediatric Surgeon</p>
-                    </div>
-                    <div className=''>
-                        <div className="leading-6 my-5">
-                            <h1 className="text-blue-400 font-bold">Profile</h1>
-                            <h1 className="font-bold text-xl">Dr.RV Singh</h1>
-                            <p className="mt-4">M.S,M.CH(Paediatric Surgeon)</p>
-                            <p className="">Medic General Madicol Hospital Lucknow (up) INDIA</p>
-                        </div>
+          bordered={false}
+          style={{ backgroundColor: '#92ee70', borderRadius: '10px' }}
+          bodyStyle={{ padding: 0 }}
+        >
 
-                        <h1 className="text-lg font-bold text-blue-300">SPECIALITY</h1>
-                        <div className="flex gap-5 mt-2">
-                            <p className=" px-2 rounded-full border border-indigo-600 text-center">Paediatric</p>
-                            <p className=" px-2 rounded-full border border-indigo-600 text-center">Endoscopic</p>
-                        </div>
-                        <div className="flex gap-5 mt-3">
-                            <p className="px-2 rounded-full border border-indigo-600 text-center">Laparoscopy</p>
-                            <p className="px-2 rounded-full border border-indigo-600 text-center">Thoracoscopy</p>
-                        </div>
-                        <div className="mt-8 ">
-                            <p className="font-medium"><span className='font-bold text-blue-300 mr-5'>EXPERIENCE</span>22Years+</p>
-                            <p className="font-medium"><span className='font-bold text-blue-300 mr-5'>LANGUAGES</span>Engilsh,Hindi</p>
-                            <p className="font-medium"><span className='font-bold text-blue-300 mr-5'>TYPES OF</span>Full Time Physician+</p>
-                        </div>
-                    </div>
+          <img
+            className='h-96 w-full object-cover rounded-t-lg' // Tailwind classes for 70% height, full width, cover the image, and top rounded corners
+            src="/name.jpg"
+            alt="Dr. RV Singh"
 
+          />
+          <div style={{ padding: '16px' }}>
+            <Title level={3} style={{ textAlign: 'center' }}>Dr. RV Singh</Title>
+            <Text style={{ display: 'block', textAlign: 'center', fontWeight: '500' }}>
+              Paediatric Surgeon
+            </Text>
+          </div>
+        </Card>
+      </Col>
 
-                </Row>
-            
+      {/* Profile Information Section */}
+      <Col xs={24} md={12} lg={12}>
+        <Card bordered={false} style={{ backgroundColor: 'transparent' }}>
+          {/* Profile Details */}
+          <div style={{ marginBottom: '16px' }}>
+            <Title level={4} style={{ color: '#60A5FA' }}>Profile</Title>
+            <Title level={5}>Dr. RV Singh</Title>
+            <Text>M.S, M.CH (Paediatric Surgeon)</Text>
+            <br />
+            <Text>Medic General Medical Hospital, Lucknow (UP), INDIA</Text>
+          </div>
 
+          {/* Specialities */}
+          <div style={{ marginBottom: '16px' }}>
+            <Title level={4} style={{ color: '#60A5FA' }}>Speciality</Title>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+              <Tag color="blue">Paediatric</Tag>
+              <Tag color="blue">Endoscopic</Tag>
+              <Tag color="blue">Laparoscopy</Tag>
+              <Tag color="blue">Thoracoscopy</Tag>
+            </div>
+          </div>
 
+          {/* Experience, Languages, Type */}
+          <div>
+            <Title level={4} style={{ color: '#60A5FA' }}>Details</Title>
+            <Text>
+              <strong style={{ color: '#60A5FA' }}>Experience: </strong>22 Years+
+            </Text>
+            <br />
+            <Text>
+              <strong style={{ color: '#60A5FA' }}>Languages: </strong>English, Hindi
+            </Text>
+            <br />
+            <Text>
+              <strong style={{ color: '#60A5FA' }}>Type: </strong>Full-Time Physician+
+            </Text>
+          </div>
+        </Card>
+      </Col>
+    </Row>
+  );
+};
 
-        </>
-    )
-}
-
-export default MyProfile
+export default MyProfile;

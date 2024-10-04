@@ -91,7 +91,7 @@ function HomePage() {
               </div>
               <div className="absolute inset-0 flex flex-col justify-end p-4">
                 <div className="bg-gradient-to-t from-black via-gray-800 to-transparent p-4 rounded-b-xl">
-                  <p className="text-xl text-white font-bold mb-2">{card.title}</p>
+                  <p className="text-lg text-white font-bold mb-2">{card.title}</p>
                   <p className="text-white">{card.description}</p>
                 </div>
               </div>

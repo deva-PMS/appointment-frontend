@@ -6,7 +6,9 @@ const layout = ({
     children: React.ReactNode;
   }>) => {
   return (
-    <LayoutPage children={children} />
+    <LayoutPage>
+      {children}
+    </LayoutPage>
   )
 }
 export default layout
