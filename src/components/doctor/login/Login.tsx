@@ -20,7 +20,7 @@ function LoginPage() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/doctor/login', {
+      const response = await fetch('https://appointment-nestjs.vercel.app//doctor/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

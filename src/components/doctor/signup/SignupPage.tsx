@@ -30,7 +30,7 @@ function SignupPage() {
             return;
         }
         try {
-            const response = await fetch('http://localhost:8080/doctor/signup', {
+            const response = await fetch('https://appointment-nestjs.vercel.app//doctor/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
